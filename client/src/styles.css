@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #111b21; color: #e9edef; }
+button, input { font: inherit; }
+
+.auth-wrap { min-height: 100vh; display: grid; place-items: center; }
+.auth-card { width: 320px; background: #202c33; padding: 20px; border-radius: 12px; }
+.auth-card form { display: grid; gap: 10px; }
+.auth-card input, .message-form input, .search {
+  border: 1px solid #2a3942; background: #111b21; color: white; padding: 10px; border-radius: 8px;
+}
+.auth-card button, .message-form button {
+  border: 0; background: #00a884; color: #fff; padding: 10px 14px; border-radius: 8px; cursor: pointer;
+}
+.text-btn { background: none; color: #53bdeb; margin-top: 10px; }
+.error { color: #ff6b6b; }
+
+.layout { height: 100vh; display: grid; grid-template-columns: 320px 1fr; position: relative; }
+.sidebar { border-right: 1px solid #2a3942; padding: 12px; }
+.user-list { margin-top: 12px; display: grid; gap: 8px; max-height: calc(100vh - 90px); overflow: auto; }
+.user-row {
+  border: 1px solid #2a3942; background: #202c33; color: #e9edef; border-radius: 10px;
+  padding: 10px; text-align: left; display: flex; justify-content: space-between; align-items: center;
+}
+.user-row.active { border-color: #00a884; }
+.user-row p { margin: 2px 0 0; font-size: 12px; color: #8696a0; }
+.status { width: 10px; height: 10px; border-radius: 999px; }
+.status.online { background: #00a884; }
+.status.offline { background: #8696a0; }
+
+.chat-window { display: grid; grid-template-rows: auto 1fr auto; padding: 16px; }
+.messages { overflow: auto; display: grid; gap: 8px; align-content: start; }
+.bubble { max-width: 60%; background: #202c33; padding: 8px 10px; border-radius: 10px; }
+.bubble.mine { justify-self: end; background: #005c4b; }
+.message-form { display: flex; gap: 10px; }
+.message-form input { flex: 1; }
+.logout { position: absolute; top: 16px; right: 16px; background: #f15c6d; border: 0; color: #fff; padding: 8px 14px; border-radius: 8px; }
